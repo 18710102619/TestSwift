@@ -9,4 +9,7 @@ import Foundation
 
 print("Hello, World!")
 
-testMethod()
+//2.函数
+//testMethod()
+//3.流程控制
+testControl()

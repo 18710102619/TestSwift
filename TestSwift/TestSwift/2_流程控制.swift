@@ -93,6 +93,7 @@ func testRange() {
  2、case、default后面不能写大括号{}，后面至少要有一条语句
  3、默认可以不写break，并不会贯穿到后面的条件，如果不想做任何事，加个break即可
  4、使用fallthrough可以实现贯穿效果
+ 5、如果能保证已处理所有情况，也可以不必使用default
  */
 func testSwitch(_ number: Int) {
     switch number {
@@ -104,6 +105,107 @@ func testSwitch(_ number: Int) {
         break
     default:
         break
+    }
+    
+    //由于已确定answer类型，因此可以省略Answer
+    enum Answer {case right, wrong}
+    let answer=Answer.right
+    switch answer {
+    case .right:
+        print("right")
+    case .wrong:
+        print("wrong")
+    }
+
+    //**复合条件**
+    //switch也支持String、Character类型
+    let str:String = "Jack"
+    switch str {
+    case "Jack":
+        fallthrough
+    case "Rose":
+        print("Right person")
+    default:
+        break
+    }
+    let char:Character = "a"
+    switch char {
+    case "a","A":
+        print("Right person")
+    default:
+        break
+    }
+
+    //区间匹配、元组匹配
+    let count = 0
+    switch count {
+    case 0:
+        print(count)
+    case 1..<5:
+        print(count)
+    case 5..<10:
+        print(count)
+    default:
+        break
+    }
+    //可以使用下划线_忽略某个值
+    //关于case匹配问题，属于模式匹配的范畴
+    let point = (0,0)
+    switch point {
+    case (0,0):
+        print(point)
+    case (_,0):
+        print(point)
+    case (-2...2,-2...2):
+        print(point)
+    default:
+        break
+    }
+
+    //**值绑定**
+    switch point {
+    case (var x,0):
+        x += 2
+    case (0,var y):
+        y += 2
+    case var (x,y):
+        x += 2
+        y += 2
+    }
+}
+
+//where
+func testWhere(_ point:(Int,Int)) {
+    switch point {
+    case var(x, y) where x == y:
+        x += 2
+    case var(x, y) where x == -y:
+        y += 2
+    case var(x, y):
+        x += 2
+        y += 2
+    }
+    //将所有正数加起来
+    var numbers = [10,20,30,40,-10,-20]
+    var sum=0
+    let num=0
+    for item in numbers where num > 0{
+        sum += num
+    }
+}
+
+//测试用例
+func Outer() {
+    outer:for i in 1...4 {
+        for k in 1...4 {
+            if k==3 {
+                continue outer
+            }
+            if i==3 {
+                break outer
+            }
+            print("i==\(i),k==\(k)")
+        }
     }
 }
 

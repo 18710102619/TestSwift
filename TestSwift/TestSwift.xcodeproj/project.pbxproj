@@ -61,9 +61,9 @@
 		363F669E25C004D900D01356 /* TestSwift */ = {
 			isa = PBXGroup;
 			children = (
-				363F669F25C004D900D01356 /* main.swift */,
-				363F66A725C004F600D01356 /* 3_函数.swift */,
 				363F66AB25C13E4700D01356 /* 2_流程控制.swift */,
+				363F66A725C004F600D01356 /* 3_函数.swift */,
+				363F669F25C004D900D01356 /* main.swift */,
 			);
 			path = TestSwift;
 			sourceTree = "<group>";
