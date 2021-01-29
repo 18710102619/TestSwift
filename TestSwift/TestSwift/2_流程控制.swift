@@ -174,7 +174,7 @@ func testSwitch(_ number: Int) {
     }
 }
 
-//where
+//6.where
 func testWhere(_ point:(Int,Int)) {
     switch point {
     case var(x, y) where x == y:
@@ -194,9 +194,9 @@ func testWhere(_ point:(Int,Int)) {
     }
 }
 
-//测试用例
-func Outer() {
-    outer:for i in 1...4 {
+//7.标签语句
+func testOuter() {
+    outer: for i in 1...4 {
         for k in 1...4 {
             if k==3 {
                 continue outer
@@ -209,7 +209,12 @@ func Outer() {
     }
 }
 
+//测试用例
 func testControl() {
+    //7
+    testOuter()
+    //6
+    testWhile()
     //5
     testSwitch(1)
     //4

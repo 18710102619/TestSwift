@@ -10,6 +10,8 @@
 		363F66A025C004D900D01356 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363F669F25C004D900D01356 /* main.swift */; };
 		363F66A825C004F600D01356 /* 3_函数.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363F66A725C004F600D01356 /* 3_函数.swift */; };
 		363F66AC25C13E4700D01356 /* 2_流程控制.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363F66AB25C13E4700D01356 /* 2_流程控制.swift */; };
+		363F672E25C29D8500D01356 /* 4_枚举.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363F672D25C29D8500D01356 /* 4_枚举.swift */; };
+		36B633B425C3F00A00A4982C /* 5_可选项.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B633B325C3F00A00A4982C /* 5_可选项.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,8 @@
 		363F669F25C004D900D01356 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		363F66A725C004F600D01356 /* 3_函数.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3_函数.swift"; sourceTree = "<group>"; };
 		363F66AB25C13E4700D01356 /* 2_流程控制.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2_流程控制.swift"; sourceTree = "<group>"; };
+		363F672D25C29D8500D01356 /* 4_枚举.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4_枚举.swift"; sourceTree = "<group>"; };
+		36B633B325C3F00A00A4982C /* 5_可选项.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "5_可选项.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +65,11 @@
 		363F669E25C004D900D01356 /* TestSwift */ = {
 			isa = PBXGroup;
 			children = (
+				363F669F25C004D900D01356 /* main.swift */,
 				363F66AB25C13E4700D01356 /* 2_流程控制.swift */,
 				363F66A725C004F600D01356 /* 3_函数.swift */,
-				363F669F25C004D900D01356 /* main.swift */,
+				363F672D25C29D8500D01356 /* 4_枚举.swift */,
+				36B633B325C3F00A00A4982C /* 5_可选项.swift */,
 			);
 			path = TestSwift;
 			sourceTree = "<group>";
@@ -125,6 +131,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363F672E25C29D8500D01356 /* 4_枚举.swift in Sources */,
+				36B633B425C3F00A00A4982C /* 5_可选项.swift in Sources */,
 				363F66AC25C13E4700D01356 /* 2_流程控制.swift in Sources */,
 				363F66A825C004F600D01356 /* 3_函数.swift in Sources */,
 				363F66A025C004D900D01356 /* main.swift in Sources */,
