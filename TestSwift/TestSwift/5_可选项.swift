@@ -109,6 +109,34 @@ func testOptional() {
         print(c)
     }
 
+    //** 隐式解包 **
+    /*
+     1、在某些情况下，可选项一但被设定值之后，就会一直拥有值
+     2、在这种情况下，可以去掉检查，也不必每次访问的时候都进行解包，因为它能确定每次访问的时候都有值
+     3、可以在类型后面加个感叹号！定义一个隐式解包的可选项
+     */
+    let num1: Int! = 10
+    let num2: Int = num1
+    if num2 != nil {
+        print(num2 + 6)
+    }
+    if let num3 = num1 {
+        print(num3)
+    }
+
+    //** 字符串插值 **
+    //可选项在字符串插值或者直接打印时，编译器会发出警告
+    //3种方法消除警告
+    let age2: Int?=10
+    print("My age is \(age2!)")
+    print("My age is \(String(describing: age2))")
+    print("My age is \(age2 ?? 0)")
+
+    //** 多重可选项 **
+    var num11: Int? = 10
+    var num22: Int?? = num11
+    var num33: Int?? = 10
+
     login1(["username" : "张三", "password" : "123456"])
     login1(["username" : "李四"])
     login1(["password" : "78900"])
