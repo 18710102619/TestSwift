@@ -29,4 +29,7 @@ import Foundation
 //4_枚举
 //testEnum()
 //5_可选项
-testOptional()
+//testOptional()
+//6_结构体和类
+testStruct()
+testClass()
