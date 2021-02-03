@@ -15,6 +15,7 @@
 		36B633BE25C7A93800A4982C /* 6_结构体和类.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B633BD25C7A93800A4982C /* 6_结构体和类.swift */; };
 		36B633C125C7E26800A4982C /* 7_闭包.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B633C025C7E26800A4982C /* 7_闭包.swift */; };
 		36B633C425C7E27D00A4982C /* 8_属性.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B633C325C7E27D00A4982C /* 8_属性.swift */; };
+		36B633CB25C8060000A4982C /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B633CA25C8060000A4982C /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		36B633BD25C7A93800A4982C /* 6_结构体和类.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6_结构体和类.swift"; sourceTree = "<group>"; };
 		36B633C025C7E26800A4982C /* 7_闭包.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7_闭包.swift"; sourceTree = "<group>"; };
 		36B633C325C7E27D00A4982C /* 8_属性.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8_属性.swift"; sourceTree = "<group>"; };
+		36B633CA25C8060000A4982C /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				36B633BD25C7A93800A4982C /* 6_结构体和类.swift */,
 				36B633C025C7E26800A4982C /* 7_闭包.swift */,
 				36B633C325C7E27D00A4982C /* 8_属性.swift */,
+				36B633CA25C8060000A4982C /* SwiftUIView.swift */,
 			);
 			path = TestSwift;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				36B633C125C7E26800A4982C /* 7_闭包.swift in Sources */,
 				36B633C425C7E27D00A4982C /* 8_属性.swift in Sources */,
+				36B633CB25C8060000A4982C /* SwiftUIView.swift in Sources */,
 				36B633BE25C7A93800A4982C /* 6_结构体和类.swift in Sources */,
 				363F672E25C29D8500D01356 /* 4_枚举.swift in Sources */,
 				36B633B425C3F00A00A4982C /* 5_可选项.swift in Sources */,

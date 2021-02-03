@@ -31,5 +31,9 @@ import Foundation
 //5_可选项
 //testOptional()
 //6_结构体和类
-testStruct()
-testClass()
+//testStruct()
+//testClass()
+//7_闭包
+//testClosure()
+//8_属性
+testProperty()
