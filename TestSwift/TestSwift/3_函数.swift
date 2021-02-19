@@ -148,7 +148,7 @@ func forward2(_ forward: Bool) -> ((Int) -> Int) {
 
 
 //无返回值
-func testMethod() -> Void {
+func testFunction() -> Void {
 
     //13
     print(forward2(true)(3))

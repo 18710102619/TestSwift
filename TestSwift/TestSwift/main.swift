@@ -25,7 +25,7 @@ import Foundation
 //2_流程控制
 //testControl()
 //3_函数
-//testMethod()
+//testFunction()
 //4_枚举
 //testEnum()
 //5_可选项
@@ -36,4 +36,6 @@ import Foundation
 //7_闭包
 //testClosure()
 //8_属性
-testProperty()
+//testProperty()
+//9_方法
+testMethod()
