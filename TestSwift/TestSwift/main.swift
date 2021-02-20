@@ -43,3 +43,5 @@ import Foundation
 //testSubscript()
 //11_继承
 //testInHeritance()
+//12_初始化
+testInit()
