@@ -38,4 +38,8 @@ import Foundation
 //8_属性
 //testProperty()
 //9_方法
-testMethod()
+//testMethod()
+//10_下标
+//testSubscript()
+//11_继承
+//testInHeritance()

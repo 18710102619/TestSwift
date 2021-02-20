@@ -16,6 +16,8 @@
 		36B633C125C7E26800A4982C /* 7_闭包.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B633C025C7E26800A4982C /* 7_闭包.swift */; };
 		36B633C425C7E27D00A4982C /* 8_属性.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B633C325C7E27D00A4982C /* 8_属性.swift */; };
 		36B6C27A25DF5ED1009DBFEE /* 9_方法.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C27925DF5ED1009DBFEE /* 9_方法.swift */; };
+		36B6C27D25DFBF43009DBFEE /* 10_下标.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C27C25DFBF42009DBFEE /* 10_下标.swift */; };
+		36B6C28025E0ADF5009DBFEE /* 11_继承.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C27F25E0ADF5009DBFEE /* 11_继承.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,8 @@
 		36B633C025C7E26800A4982C /* 7_闭包.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7_闭包.swift"; sourceTree = "<group>"; };
 		36B633C325C7E27D00A4982C /* 8_属性.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8_属性.swift"; sourceTree = "<group>"; };
 		36B6C27925DF5ED1009DBFEE /* 9_方法.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "9_方法.swift"; sourceTree = "<group>"; };
+		36B6C27C25DFBF42009DBFEE /* 10_下标.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10_下标.swift"; sourceTree = "<group>"; };
+		36B6C27F25E0ADF5009DBFEE /* 11_继承.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "11_继承.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				36B633C025C7E26800A4982C /* 7_闭包.swift */,
 				36B633C325C7E27D00A4982C /* 8_属性.swift */,
 				36B6C27925DF5ED1009DBFEE /* 9_方法.swift */,
+				36B6C27C25DFBF42009DBFEE /* 10_下标.swift */,
+				36B6C27F25E0ADF5009DBFEE /* 11_继承.swift */,
 			);
 			path = TestSwift;
 			sourceTree = "<group>";
@@ -147,8 +153,10 @@
 				36B6C27A25DF5ED1009DBFEE /* 9_方法.swift in Sources */,
 				36B633C425C7E27D00A4982C /* 8_属性.swift in Sources */,
 				36B633BE25C7A93800A4982C /* 6_结构体和类.swift in Sources */,
+				36B6C27D25DFBF43009DBFEE /* 10_下标.swift in Sources */,
 				363F672E25C29D8500D01356 /* 4_枚举.swift in Sources */,
 				36B633B425C3F00A00A4982C /* 5_可选项.swift in Sources */,
+				36B6C28025E0ADF5009DBFEE /* 11_继承.swift in Sources */,
 				363F66AC25C13E4700D01356 /* 2_流程控制.swift in Sources */,
 				363F66A825C004F600D01356 /* 3_函数.swift in Sources */,
 				363F66A025C004D900D01356 /* main.swift in Sources */,
