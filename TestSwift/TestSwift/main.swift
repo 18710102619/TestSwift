@@ -48,4 +48,6 @@ import Foundation
 //13_可选链
 //testOptionalChaining()
 //14_协议
-testProtocol()
+//testProtocol()
+//15_错误处理
+testError()
