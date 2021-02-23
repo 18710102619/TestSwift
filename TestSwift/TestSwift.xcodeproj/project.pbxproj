@@ -20,6 +20,7 @@
 		36B6C28025E0ADF5009DBFEE /* 11_继承.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C27F25E0ADF5009DBFEE /* 11_继承.swift */; };
 		36B6C28525E0E3B3009DBFEE /* 12_初始化.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C28425E0E3B3009DBFEE /* 12_初始化.swift */; };
 		36B6C28825E10748009DBFEE /* 13_可选链.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C28725E10748009DBFEE /* 13_可选链.swift */; };
+		36B6C28B25E11285009DBFEE /* 14_协议.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C28A25E11285009DBFEE /* 14_协议.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		36B6C27F25E0ADF5009DBFEE /* 11_继承.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "11_继承.swift"; sourceTree = "<group>"; };
 		36B6C28425E0E3B3009DBFEE /* 12_初始化.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "12_初始化.swift"; sourceTree = "<group>"; };
 		36B6C28725E10748009DBFEE /* 13_可选链.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "13_可选链.swift"; sourceTree = "<group>"; };
+		36B6C28A25E11285009DBFEE /* 14_协议.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "14_协议.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				36B6C27F25E0ADF5009DBFEE /* 11_继承.swift */,
 				36B6C28425E0E3B3009DBFEE /* 12_初始化.swift */,
 				36B6C28725E10748009DBFEE /* 13_可选链.swift */,
+				36B6C28A25E11285009DBFEE /* 14_协议.swift */,
 			);
 			path = TestSwift;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				363F66AC25C13E4700D01356 /* 2_流程控制.swift in Sources */,
 				363F66A825C004F600D01356 /* 3_函数.swift in Sources */,
 				363F66A025C004D900D01356 /* main.swift in Sources */,
+				36B6C28B25E11285009DBFEE /* 14_协议.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,4 +44,8 @@ import Foundation
 //11_继承
 //testInHeritance()
 //12_初始化
-testInit()
+//testInit()
+//13_可选链
+//testOptionalChaining()
+//14_协议
+testProtocol()
