@@ -53,8 +53,52 @@ func testDocatch2() {
     }
 }
 
+/*
+ rethrows
+ rethrows表明：函数本身不会抛出错误，但调用闭包参数抛出错误，那么它会将错误向上抛
+ */
+func exec(_ fn: (Int, Int) throws -> Int, _ num1: Int, _ num2: Int) rethrows {
+    print(try fn(num1, num2))
+}
 
-func testError() {
+/*
+ fatalError
+
+ 如果遇到严重问题，希望结束程序运行时，可以直接使用fatalError函数抛出错误（这是无法通过do-catch捕捉的错误）
+ 使用了fatalError函数，就不需要再写return
+ */
+func test(_ num: Int) -> Int {
+    if num >= 0 {
+        return 1
+    }
+    fatalError("num不能小于0")
+}
+//在某些不得不实现、但不希望别人调用的方法，可以考虑内部使用fatalError函数
+class Person1 { required init() {} }
+class Student1 : Person1 {
+    required init() { fatalError("不要调用初始化") }
+    init(score: Int) {}
+}
+
+func testError() throws {
+
+    /*
+     局部作用域
+     可以使用do实现局部作用域
+     */
+    do {
+        let dog = Dog()
+        dog.weight=10
+    }
+    do {
+        let dog = Dog()
+        dog.weight=20
+    }
+
+    var stu1 = Student1(score:98)
+    var stu2 = Student1()
+
+    try exec(divide, 20, 0)
 
     /*
      try?、try!

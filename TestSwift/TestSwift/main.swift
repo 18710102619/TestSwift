@@ -50,4 +50,4 @@ import Foundation
 //14_协议
 //testProtocol()
 //15_错误处理
-testError()
+try testError()
