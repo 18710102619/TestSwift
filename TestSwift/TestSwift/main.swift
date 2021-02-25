@@ -51,3 +51,5 @@ import Foundation
 //testProtocol()
 //15_错误处理
 //try testError()
+//18_高级运算符
+testOperator()
