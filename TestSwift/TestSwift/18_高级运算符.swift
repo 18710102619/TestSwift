@@ -34,17 +34,42 @@ struct Point18_2 : Equatable {
     var x:Int, y:Int
 }
 
+/*
+ Comparable
+ 要想比较2个实例的大小，一般做法是：
+ 遵守Comparable协议
+ 重载相应的运算符
+ */
+struct Student18 : Comparable {
+    var age: Int
+    var score: Int
+    init(score: Int, age: Int) {
+        self.score = score
+        self.age = age
+    }
+    static func < (lhs: Student18, rhs: Student18) -> Bool {
+        (lhs.score < rhs.score) || (lhs.score == rhs.score && lhs.age > rhs.age)
+    }
+}
+
+
+
 func testOperator() {
 
+    /* Comparable */
+    let stu1 = Student18(score: 100, age: 20)
+    let stu2 = Student18(score: 100, age: 18)
+    print(stu1 > stu2)
+
     /* Equatable */
-    var p1 = Point18_2(x: 10, y: 20)
-    var p2 = Point18_2(x: 10, y: 20)
-    print(p1 == p2)
-    print(p1 != p2)
+//    var p1 = Point18_2(x: 10, y: 20)
+//    var p2 = Point18_2(x: 10, y: 20)
+//    print(p1 == p2)
+//    print(p1 != p2)
 
     /* 运算符重载 */
-    let p = Point18_1(x: 10, y: 20) + Point18_1(x: 11, y: 22)
-    print(p)
+//    let p = Point18_1(x: 10, y: 20) + Point18_1(x: 11, y: 22)
+//    print(p)
 
     /*
      溢出运算符
