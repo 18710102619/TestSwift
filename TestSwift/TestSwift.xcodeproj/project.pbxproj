@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		360D4DA525E647950063DBF9 /* 16_泛型.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D4DA425E647950063DBF9 /* 16_泛型.swift */; };
 		360D4DA825E668730063DBF9 /* 18_高级运算符.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D4DA725E668730063DBF9 /* 18_高级运算符.swift */; };
+		360D4DAB25E785600063DBF9 /* 19_扩展.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D4DAA25E785600063DBF9 /* 19_扩展.swift */; };
 		363F66A025C004D900D01356 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363F669F25C004D900D01356 /* main.swift */; };
 		363F66A825C004F600D01356 /* 3_函数.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363F66A725C004F600D01356 /* 3_函数.swift */; };
 		363F66AC25C13E4700D01356 /* 2_流程控制.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363F66AB25C13E4700D01356 /* 2_流程控制.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		360D4DA425E647950063DBF9 /* 16_泛型.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "16_泛型.swift"; sourceTree = "<group>"; };
 		360D4DA725E668730063DBF9 /* 18_高级运算符.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "18_高级运算符.swift"; sourceTree = "<group>"; };
+		360D4DAA25E785600063DBF9 /* 19_扩展.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "19_扩展.swift"; sourceTree = "<group>"; };
 		363F669C25C004D900D01356 /* TestSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		363F669F25C004D900D01356 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		363F66A725C004F600D01356 /* 3_函数.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3_函数.swift"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				36B6C28E25E4D54E009DBFEE /* 15_错误处理.swift */,
 				360D4DA425E647950063DBF9 /* 16_泛型.swift */,
 				360D4DA725E668730063DBF9 /* 18_高级运算符.swift */,
+				360D4DAA25E785600063DBF9 /* 19_扩展.swift */,
 			);
 			path = TestSwift;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				36B633B425C3F00A00A4982C /* 5_可选项.swift in Sources */,
 				36B6C28525E0E3B3009DBFEE /* 12_初始化.swift in Sources */,
 				36B6C28025E0ADF5009DBFEE /* 11_继承.swift in Sources */,
+				360D4DAB25E785600063DBF9 /* 19_扩展.swift in Sources */,
 				363F66AC25C13E4700D01356 /* 2_流程控制.swift in Sources */,
 				363F66A825C004F600D01356 /* 3_函数.swift in Sources */,
 				363F66A025C004D900D01356 /* main.swift in Sources */,
