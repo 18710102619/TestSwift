@@ -52,4 +52,10 @@ import Foundation
 //15_错误处理
 //try testError()
 //18_高级运算符
-testOperator()
+//testOperator()
+//19_扩展
+//testExtension()
+//20_访问控制
+//testAccessControl()
+//21_内存管理
+testMemoryManagement()
