@@ -58,3 +58,83 @@ public class Person24 {
 /*
  条件编译
  */
+#if DEBUG
+//debug模式
+#else
+//release模式
+#endif
+
+/*
+ 打印
+ */
+func log<T>(_ msg: T,
+            file: NSString = #file,
+            line: Int = #line,
+            fn: String = #function)  {
+    #if DEBUG
+    let prefix = "\(file.lastPathComponent)_\(line)_\(fn):"
+    print(prefix,msg)
+    #endif
+}
+
+/*
+ 系统版本检测
+ */
+func test24_3() {
+    if #available(iOS 10, macOS 10.12, *) {
+        //对于iOS平台，只在iOS10及以上版本执行
+        //对于macOS平台，只在macOS 10.12及以上版本执行
+        //最后的*表示在其他所有平台都执行
+    }
+}
+
+/*
+ API可用性说明
+ */
+func test24_4() {
+    @available(iOS 10, macOS 10.15, *)
+    class Person {}
+
+    struct Student {
+        @available(*, unavailable, renamed: "study")
+        func study_() {}
+        func study() {}
+
+        @available(iOS, deprecated: 11)
+        @available(macOS, deprecated: 10.12)
+        func run() {}
+    }
+}
+
+/*
+ iOS程序的入口
+ 在AppDelegate上面默认有个@UIApplicationMain标记，这表示
+ 编译器自动生成入口代码（main函数代码），自动设置Appdelegate为APP的代理
+ 注：也可以删掉@UIApplicationMain，自定义入口代码：新建一个main.swift文件
+ */
+
+/*
+ Swift调用OC
+ 新建1个桥接头文件，文件名格式默认为：{targetName}-Bridging-Header.h
+ 在 {targetName}-Bridging-Header.h 文件中 #import OC需要暴露给Swift的内容
+
+ 如果C语言暴露给Swift的函数名跟Swift中的其他函数名冲突了
+ 可以在Swift中使用 _silgen_name 修改C函数名
+
+ */
+
+@_silgen_name("sum") func swift_sum(_ v1: Int32, _ v2: Int32) -> Int32
+
+func testOC() {
+    let p = FFPerson(age: 10, name: "Jack")
+    p.age=10
+    p.name="Rose"
+    p.run()
+    p.eat("Apple", other: "Water")
+
+    FFPerson.run()
+    FFPerson.eat("Pizza", other: "Banana")
+
+    print(swift_sum(10, 20))
+    print(sum(10, 20))
+}
