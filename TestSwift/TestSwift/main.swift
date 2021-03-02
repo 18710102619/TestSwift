@@ -58,4 +58,11 @@ import Foundation
 //20_访问控制
 //testAccessControl()
 //21_内存管理
-testMemoryManagement()
+//testMemoryManagement()
+//22_字面量
+/*
+ 字面量协议
+ swift自带类型之所以能够通过字面量初始化，是因为它们遵守了对应的协议
+ */
+//23_模式匹配
+//testPattern()
