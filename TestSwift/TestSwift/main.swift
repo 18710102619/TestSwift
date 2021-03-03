@@ -67,4 +67,5 @@ import Foundation
 //23_模式匹配
 //testPattern()
 //24_从OC到Swift
-testOC()
+test_OC_Swift()
+test_Swift_OC()

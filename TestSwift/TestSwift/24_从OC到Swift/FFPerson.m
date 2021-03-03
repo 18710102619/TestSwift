@@ -15,6 +15,7 @@
     if (self = [super init]) {
         self.age=age;
         self.name=name;
+        self.car=[[FFCar alloc]initWithPrice:200000 band:@"比亚迪"];
     }
     return self;
 }
@@ -24,10 +25,14 @@
 }
 
 - (void)run {
+    if (_car) {
+        [self.car run];
+    }
     NSLog(@"%zd %@ -run", _age, _name);
 }
 
 + (void)run {
+    [FFCar run];
     NSLog(@"Person +run");
 }
 

@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "TestSwift-Swift.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign)NSInteger age;
 @property(nonatomic, copy)NSString *name;
+@property(nonatomic, strong)FFCar *car;
 
 - (instancetype)initWithAge:(NSInteger)age name:(NSString *)name;
 + (instancetype)personWithAge:(NSInteger)age name:(NSString *)name;

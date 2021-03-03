@@ -120,12 +120,9 @@ func test24_4() {
 
  如果C语言暴露给Swift的函数名跟Swift中的其他函数名冲突了
  可以在Swift中使用 _silgen_name 修改C函数名
-
  */
-
 @_silgen_name("sum") func swift_sum(_ v1: Int32, _ v2: Int32) -> Int32
-
-func testOC() {
+func test_OC_Swift() {
     let p = FFPerson(age: 10, name: "Jack")
     p.age=10
     p.name="Rose"
@@ -137,4 +134,17 @@ func testOC() {
 
     print(swift_sum(10, 20))
     print(sum(10, 20))
+}
+
+/*
+ OC调用Swift
+ Xcode已经默认生成一个用于OC调用Swift的头文件，文件名格式是：{targetName}-Swift.h
+ */
+func test_Swift_OC() {
+
+}
+
+
+func testBridging() {
+    
 }
