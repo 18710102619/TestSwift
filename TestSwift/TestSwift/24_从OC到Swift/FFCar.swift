@@ -21,13 +21,23 @@ import Foundation
 @objcMembers class FFCar: NSObject {
     var price: Double
     var band: String
+
     init(price: Double, band: String) {
         self.price = price
         self.band = band
     }
     //实例方法
+    func drive() {
+        print("test")
+    }
     func run() {
         print(price, band, "run")
+        /*
+         选择器（Selector）
+         1、Swift中依然可以使用选择器，使用#selector(name)定义一个选择器
+         2、必须是被@objcMembers或@objc修饰的方法才可以定义选择器
+         */
+        perform(#selector(drive))
     }
     //类方法
     static func run() {
