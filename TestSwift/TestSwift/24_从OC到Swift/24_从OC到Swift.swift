@@ -122,7 +122,7 @@ func test24_4() {
  可以在Swift中使用 _silgen_name 修改C函数名
  */
 @_silgen_name("sum") func swift_sum(_ v1: Int32, _ v2: Int32) -> Int32
-func testOCSwift() {
+func testOC_Swift() {
 
     let p = FFPerson(age: 10, name: "Jack")
     p.age=10

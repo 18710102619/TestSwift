@@ -156,3 +156,54 @@ class Dog24_2: Runnable24 {
         print("Dog run3")
     }
 }
+
+/*
+ 8、KVC\KVO
+
+ Swift支持 KVC\KVO 的条件
+ 属性所在的类、监听器最终继承自NSObject
+ 用 @objc dynamic 修饰对应的属性
+ */
+class Observer: NSObject {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        print("observeValue：", change?[.newKey] as Any)
+    }
+}
+class Person24_1: NSObject {
+    @objc dynamic var age: Int = 0
+    var observer: Observer = Observer()
+    override init() {
+        super.init()
+        self.addObserver(observer,
+                         forKeyPath: "age",
+                         options: .new,
+                         context: nil)
+    }
+    deinit {
+        self.removeObserver(observer, forKeyPath: "age")
+    }
+}
+//block方式的KVO
+class Person24_2: NSObject {
+    @objc dynamic var age: Int = 0
+    var observer: NSKeyValueObservation?
+    override init() {
+        super.init()
+        observer = observe(\Person24_2.age, options: .new) {
+            (person, change) in
+            print(change.newValue as Any)
+        }
+    }
+}
+
+func testSwift_OC() {
+
+    //8、KVC\KVO
+    let p1 = Person24_1()
+    p1.age = 10
+    p1.setValue(25, forKey: "age")
+
+    let p2 = Person24_2()
+    p2.age = 20
+    p2.setValue(25, forKey: "age")
+}
