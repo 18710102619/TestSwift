@@ -33,6 +33,8 @@
 		36B6C28825E10748009DBFEE /* 13_可选链.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C28725E10748009DBFEE /* 13_可选链.swift */; };
 		36B6C28B25E11285009DBFEE /* 14_协议.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C28A25E11285009DBFEE /* 14_协议.swift */; };
 		36B6C28F25E4D54E009DBFEE /* 15_错误处理.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C28E25E4D54E009DBFEE /* 15_错误处理.swift */; };
+		36CAFF1F25F20FE000D455CA /* 25_函数式编程.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAFF1E25F20FE000D455CA /* 25_函数式编程.swift */; };
+		36CAFF2425F8ABC600D455CA /* 24_多线程开发.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAFF2325F8ABC600D455CA /* 24_多线程开发.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -78,6 +80,8 @@
 		36B6C28725E10748009DBFEE /* 13_可选链.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "13_可选链.swift"; sourceTree = "<group>"; };
 		36B6C28A25E11285009DBFEE /* 14_协议.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "14_协议.swift"; sourceTree = "<group>"; };
 		36B6C28E25E4D54E009DBFEE /* 15_错误处理.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "15_错误处理.swift"; sourceTree = "<group>"; };
+		36CAFF1E25F20FE000D455CA /* 25_函数式编程.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "25_函数式编程.swift"; sourceTree = "<group>"; };
+		36CAFF2325F8ABC600D455CA /* 24_多线程开发.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "24_多线程开发.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,12 +98,13 @@
 		360D4E2C25EE31340063DBF9 /* 24_从OC到Swift */ = {
 			isa = PBXGroup;
 			children = (
+				360D4E3025EE42B90063DBF9 /* TestSwift-Bridging-Header.h */,
 				360D4E2D25EE317A0063DBF9 /* 24_从OC到Swift.swift */,
 				360D4E4925EF7D7C0063DBF9 /* 24_从Swift到OC.swift */,
+				36CAFF2325F8ABC600D455CA /* 24_多线程开发.swift */,
 				360D4E3E25EF3DCB0063DBF9 /* FFCar.swift */,
 				360D4E3125EE42BA0063DBF9 /* FFPerson.h */,
 				360D4E3225EE42BA0063DBF9 /* FFPerson.m */,
-				360D4E3025EE42B90063DBF9 /* TestSwift-Bridging-Header.h */,
 				360D4E3925EE5D240063DBF9 /* Method.h */,
 				360D4E3A25EE5D240063DBF9 /* Method.c */,
 			);
@@ -147,6 +152,7 @@
 				360D4DE825EC96FA0063DBF9 /* 20_访问控制.swift */,
 				360D4DEB25ECE4810063DBF9 /* 21_内存管理.swift */,
 				360D4E2925EE23680063DBF9 /* 23_模式匹配.swift */,
+				36CAFF1E25F20FE000D455CA /* 25_函数式编程.swift */,
 			);
 			path = TestSwift;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CAFF1F25F20FE000D455CA /* 25_函数式编程.swift in Sources */,
 				36B633C125C7E26800A4982C /* 7_闭包.swift in Sources */,
 				36B6C28825E10748009DBFEE /* 13_可选链.swift in Sources */,
 				360D4E3F25EF3DCB0063DBF9 /* FFCar.swift in Sources */,
@@ -219,6 +226,7 @@
 				36B633C425C7E27D00A4982C /* 8_属性.swift in Sources */,
 				360D4DE925EC96FA0063DBF9 /* 20_访问控制.swift in Sources */,
 				36B633BE25C7A93800A4982C /* 6_结构体和类.swift in Sources */,
+				36CAFF2425F8ABC600D455CA /* 24_多线程开发.swift in Sources */,
 				360D4E4A25EF7D7C0063DBF9 /* 24_从Swift到OC.swift in Sources */,
 				36B6C27D25DFBF43009DBFEE /* 10_下标.swift in Sources */,
 				360D4E2A25EE23680063DBF9 /* 23_模式匹配.swift in Sources */,

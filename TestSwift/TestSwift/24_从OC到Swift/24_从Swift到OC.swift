@@ -196,6 +196,41 @@ class Person24_2: NSObject {
     }
 }
 
+/*
+ 9、关联对象
+
+ 在Swift中，class依然可以使用关联对象
+ 默认情况，extension不可以增加存储属性
+ 借助关联对象，可以实现类似extension为class增加存储属性效果
+ */
+class Person24_3 { }
+extension Person24_3 {
+    private static var AGE_KEY: Void?
+    var age: Int {
+        get {
+            (objc_getAssociatedObject(self, &Self.AGE_KEY) as? Int) ?? 0
+        }
+        set {
+            objc_setAssociatedObject(self, &Self.AGE_KEY, newValue, .OBJC_ASSOCIATION_ASSIGN)
+        }
+    }
+}
+
+/*
+ 10、资源名管理
+ */
+enum R {
+    enum string: String {
+        case add = "添加"
+    }
+    enum image: String {
+        case logo
+    }
+    enum segue: String {
+        case login_main
+    }
+}
+
 func testSwift_OC() {
 
     //8、KVC\KVO
