@@ -8,49 +8,6 @@
 import Foundation
 
 /*
- Swift中$0、$1的实际含义
- Swift自动为闭包提供参数名缩写功能，可以直接通过$0和$1等来表示闭包中第一个第二个参数，
- 并且对应的参数类型会根据函数类型来进行判断
-
- 注：可以发现使用$0、$1的话，参数类型可以自动判断，并且in关键字也可以省略，
- 也就是只能用写函数体就可以了
- */
-func testSorted() {
-    let numbers = [1,2,5,4,3,6,8,7]
-    let sortNumbers = numbers.sorted(by: {$0 < $1})
-    print("numbers -" + "\(sortNumbers)")
-}
-
-/*
- 函数式编程
-
- 函数式编程是一种编程规范，也就是如何编写程序的方法论
- 主要思想：把计算过程尽量分解成一系列可复用函数的调用
- 主要特征：函数是"第一等公民"
- 函数与其他数据类型一样的地位，可以赋值给其他变量，也可以作为函数参数、函数返回值
- */
-func add(_ v: Int) -> (Int) -> Int { return { $0 + v } }
-func sub(_ v: Int) -> (Int) -> Int { return { $0 - v } }
-func multiple(_ v: Int) -> (Int) -> Int { return { $0 * v } }
-func divide(_ v: Int) -> (Int) -> Int { return { $0 / v } }
-func mod(_ v: Int) -> (Int) -> Int { return { $0 % v } }
-// 函数合成
-infix operator >>> : AdditionPrecedence
-func >>>(_ f1: @escaping (Int) -> Int,
-         _ f2: @escaping (Int) -> Int) -> (Int) -> Int{ { f2(f1($0)) } }
-
-/*
- 柯里化
-
- 什么是柯里化？
- 将一个接受多参数的函数变换为一系列只接受单个参数的函数
- */
-func add1(_ v1: Int,_ v2: Int) -> Int { v1+v2 }
-//add1(10, 20)
-func add2(_ v: Int) -> (Int) -> Int { return { $0 + v } }
-//add2(10)(20)
-
-/*
  Array的常见操作
  */
 func testArray() {
@@ -85,9 +42,60 @@ func testArray() {
     print("array8:",array8)
 }
 
+/*
+ Swift中$0、$1的实际含义
+ Swift自动为闭包提供参数名缩写功能，可以直接通过$0和$1等来表示闭包中第一个第二个参数，
+ 并且对应的参数类型会根据函数类型来进行判断
+
+ 注：可以发现使用$0、$1的话，参数类型可以自动判断，并且in关键字也可以省略，
+ 也就是只能用写函数体就可以了
+ */
+func testSorted() {
+    let numbers = [1,2,5,4,3,6,8,7]
+    let sortNumbers = numbers.sorted(by: {$0 < $1})
+    print("numbers -" + "\(sortNumbers)")
+}
+
+/*
+ 函数式编程
+ 函数式编程是一种编程规范，也就是如何编写程序的方法论
+ 主要思想：把计算过程尽量分解成一系列可复用函数的调用
+ 主要特征：函数是"第一等公民"
+ 函数与其他数据类型一样的地位，可以赋值给其他变量，也可以作为函数参数、函数返回值
+ */
+func add(_ v: Int) -> (Int) -> Int { return { $0 + v } }
+func sub(_ v: Int) -> (Int) -> Int { return { $0 - v } }
+func multiple(_ v: Int) -> (Int) -> Int { return { $0 * v } }
+func divide(_ v: Int) -> (Int) -> Int { return { $0 / v } }
+func mod(_ v: Int) -> (Int) -> Int { return { $0 % v } }
+// 函数合成
+infix operator >>> : AdditionPrecedence
+func >>>(_ f1: @escaping (Int) -> Int,
+         _ f2: @escaping (Int) -> Int) -> (Int) -> Int{ { f2(f1($0)) } }
+
+/*
+ 柯里化
+ 什么是柯里化？
+ 将一个接受多参数的函数变换为一系列只接受单个参数的函数
+ */
+func add1(_ v1: Int,_ v2: Int) -> Int { v1+v2 }
+//add1(10, 20)
+func add2(_ v: Int) -> (Int) -> Int { return { $0 + v } }
+//add2(10)(20)
+
+func add3(_ v1: Int, _ v2: Int, _ v3: Int) -> Int {
+    v1 + v2 + v3
+}
+prefix func ~<A, B, C, D>(_ fn: @escaping(A, B, C) -> D)
+-> (C) -> (B) -> (A) -> D {
+    {c in { b in {a in fn(a, b, c)}}}
+}
+
 func testFunctional() {
 
-    testSorted()
+    print( (~add3)(30)(20)(10) )
+
+    //testSorted()
 
     //let fn = add(3) >>> multiple(5) >>> sub(1) >>> mod(10) >>> divide(2)
     //print(fn(num))

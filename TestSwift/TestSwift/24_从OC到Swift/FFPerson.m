@@ -7,15 +7,13 @@
 
 #import "FFPerson.h"
 
-
-
 @implementation FFPerson
 
 - (instancetype)initWithAge:(NSInteger)age name:(NSString *)name {
     if (self = [super init]) {
         self.age=age;
         self.name=name;
-        self.car=[[FFCar alloc]initWithPrice:200000 band:@"比亚迪"];
+//        self.car=[[FFCar alloc]initWithPrice:200000 band:@"比亚迪"];
     }
     return self;
 }
@@ -32,7 +30,7 @@
 }
 
 + (void)run {
-    [FFCar run];
+//    [FFCar run];
     NSLog(@"Person +run");
 }
 

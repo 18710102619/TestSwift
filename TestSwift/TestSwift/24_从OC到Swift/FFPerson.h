@@ -11,7 +11,7 @@
  OC调用Swift
  Xcode已经默认生成一个用于OC调用Swift的头文件，文件名格式是：{targetName}-Swift.h
  */
-#import "TestSwift-Swift.h"
+//#import "TestSwift-Swift.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

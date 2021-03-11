@@ -69,6 +69,6 @@ import Foundation
 //24_从OC到Swift
 //testOC_Swift()
 //testSwift_OC()
-testThread()
+//testThread()
 //25_函数式编程
-//testFunctional()
+testFunctional()
