@@ -27,39 +27,72 @@ import Foundation
 
 var str = "1234567890"
 
-struct FF {
-    var string: String
-    init(_ string: String) {
-        self.string=string
+struct FF<Base> {
+    var base: Base
+    init(_ base: Base) {
+        self.base=base
     }
-
-    func numberCount() -> Int {
+}
+//利用协议扩展前缀属性
+protocol FFCompatiable {}
+extension FFCompatiable {
+    var ff: FF<Self> { FF(self) }
+    static var ff: FF<Self>.Type { FF<Self>.self }
+}
+//给字符串扩展功能
+//让String拥有mj前缀属性
+extension NSString: FFCompatiable {}
+//给String.mj、String().mj前缀扩展功能
+extension FF where Base : NSString {
+    var numberCount: Int {
         var count = 0
-        for c in string where ("0"..."9").contains(c) {
+        for c in base as String where ("0"..."9").contains(c) {
             count += 1
         }
         return count
+    }
+    static func test() {
+
     }
 }
 
-extension String {
-    var ff: FF {
-        return FF(self)
+class Person26 {}
+extension  Person26: FFCompatiable {}
+//Person26 或者 继承自Person26
+extension FF where Base : Person26 {
+    func run() {
+        print("跑步")
     }
+}
 
-    func ff_numberCount() -> Int {
-        var count = 0
-        for c in self where ("0"..."9").contains(c) {
-            count += 1
-        }
-        return count
-    }
+//判断是否是数组
+func isArray(_ value: Any) -> Bool {
+    //value is Array<Any>
+    value is [Any]
+}
+//判断是否是数组类型
+protocol ArrayType {}
+extension Array: ArrayType {}
+extension NSArray: ArrayType {}
+func isArrayType(_ type: Any.Type) -> Bool {
+    type is ArrayType.Type
 }
 
 func testPOP() {
-    print(str.ff.numberCount())
-    print("12345678".ff.numberCount())
 
-    print(str.ff_numberCount())
-    print("12345678".ff_numberCount())
+    print( isArrayType( NSArray.self ))
+    print( isArrayType( NSMutableArray.self ))
+    print("----------------")
+
+    print( isArray( [1,2] ))
+    print( isArray( ["1",2] ))
+    print( isArray( NSArray() ))
+    print( isArray( NSMutableArray() ))
+    print( isArray( "23123" ))
+    print("----------------")
+
+    let persoon = Person26()
+    persoon.ff.run()
+    print(str.ff.numberCount)
+    print("12345678".ff.numberCount)
 }
