@@ -71,4 +71,6 @@ import Foundation
 //testSwift_OC()
 //testThread()
 //25_函数式编程
-testFunctional()
+//testFunctional()
+//26_面向协议编程
+testPOP()

@@ -73,8 +73,9 @@ public struct Asyncs {
  */
 public struct Cache {
     private static var data = [String: Any]()
-    //    private static var lock = DispatchSemaphore(value: 1)
-    //    private static var lock = NSLock()
+    //1代表同时只有一个线程可以访问它
+    //private static var lock = DispatchSemaphore(value: 1)
+    //private static var lock = NSLock()
     private static var lock = NSRecursiveLock()
 
     public static func get(_ key: String) -> Any? {
@@ -82,8 +83,8 @@ public struct Cache {
     }
 
     public static func set(_ key: String, _ value: Any) {
-        //        lock.wait()
-        //        defer { lock.signal() }
+        //lock.wait()
+        //defer { lock.signal() }
 
         lock.lock()
         defer { lock.unlock() }
@@ -115,10 +116,12 @@ func testThread() {
 
     let dog = Dog24()
 
-    Asyncs.asyncDelay(1.0, {
+    let item = Asyncs.asyncDelay(1.0, {
         //延迟执行的方法
         print("1111111")
     }) {
         print("2222222")
     }
+    //撤销任务
+    item.cancel()
 }

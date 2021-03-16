@@ -8,9 +8,23 @@
 import Foundation
 
 /*
+ Swift中$0、$1的实际含义
+ Swift自动为闭包提供参数名缩写功能，可以直接通过$0和$1等来表示闭包中第一个第二个参数，
+ 并且对应的参数类型会根据函数类型来进行判断
+
+ 注：可以发现使用$0、$1的话，参数类型可以自动判断，并且in关键字也可以省略，
+ 也就是只能用写函数体就可以了
+ */
+func testSorted25() {
+    let numbers = [1,2,5,4,3,6,8,7]
+    let sortNumbers = numbers.sorted(by: {$0 < $1})
+    print("numbers -" + "\(sortNumbers)")
+}
+
+/*
  Array的常见操作
  */
-func testArray() {
+func testArray25() {
     let array = [1, 2, 3, 4]
 
     //[2, 4, 6, 8]
@@ -43,17 +57,107 @@ func testArray() {
 }
 
 /*
- Swift中$0、$1的实际含义
- Swift自动为闭包提供参数名缩写功能，可以直接通过$0和$1等来表示闭包中第一个第二个参数，
- 并且对应的参数类型会根据函数类型来进行判断
-
- 注：可以发现使用$0、$1的话，参数类型可以自动判断，并且in关键字也可以省略，
- 也就是只能用写函数体就可以了
+ lazy的优化
  */
-func testSorted() {
-    let numbers = [1,2,5,4,3,6,8,7]
-    let sortNumbers = numbers.sorted(by: {$0 < $1})
-    print("numbers -" + "\(sortNumbers)")
+func testLazy25() {
+    let arr = [1,2,3]
+    let result = arr.lazy.map {
+        (i: Int) -> Int in
+        print("mapping \(i)")
+        return i*2
+    }
+    print("begin------")
+    print("mapped", result[0])
+    print("mapped", result[1])
+    print("mapped", result[2])
+    print("end------")
+
+    /*
+     begin------
+     mapping 1
+     mapped 2
+     mapping 2
+     mapped 4
+     mapping 3
+     mapped 6
+     end------
+     */
+}
+
+/*
+ Optional的map和flatMap
+ */
+func testOptional25() {
+    let num1: Int? = 10
+    let num2 = num1.map { $0 * 2 }
+    //Optional(20)
+
+    let num3: Int? = nil
+    let num4 = num3.map { $0 * 2 }
+    //nil
+
+    let num22 = num1.map { Optional.some($0 * 2) }
+    //Optional(Optional(20))
+    let num33 = num1.flatMap { Optional.some($0 * 2) }
+    //Optional(20)
+
+    let num222 = (num1 != nil) ? (num1! + 10) : nil
+    let num333 = num1.map{ $0 + 10 }
+    //num222、num333是等价的
+
+    var fmt = DateFormatter()
+    fmt.dateFormat = "yyyy-MM-dd"
+    var str: String? = "2011-09-10"
+    //old
+    var date1 = str != nil ? fmt.date(from: str!) : nil
+    print("date1=",date1)
+    //new
+    var date2 = str.flatMap(fmt.date)
+    print("date1=",date2)
+
+
+    var score: Int? = 98
+    //old
+    var str1 = score != nil ? "score is \(score!)" : "No score"
+    print("str1=",str1)
+    //new
+    var str2 = score.map { "score is \($0)" ?? "No score"}
+    print("str1=",str2)
+
+    struct Person {
+        var name: String
+        var age: Int
+
+        init?(_ json: [String : Any]) {
+            guard let name = json["name"] as? String,
+                  let age = json["age"] as? Int else {
+                return nil
+            }
+            self.name = name
+            self.age = age
+        }
+    }
+
+//    var items = [
+//        Person(name: "jack", age: 20),
+//        Person(name: "rose", age: 21),
+//        Person(name: "kate", age: 22)
+//    ]
+//    //old
+//    func getPerson1(_ name: String) -> Person? {
+//        let index = items.firstIndex{ $0.name == name }
+//        return index != nil ? items[index!] : nil
+//    }
+//    //new
+//    func getPerson1(_ name: String) -> Person? {
+//        return items.firstIndex{ $0.name == name }.map { items[$0] }
+//    }
+
+    var json: Dictionary? = ["name": "Jack", "age" : 10]
+    //old
+    var p1 = json != nil ? Person(json!) : nil
+    //new
+    var p2 = json.flatMap(Person.init)
 }
 
 /*
@@ -74,6 +178,16 @@ func >>>(_ f1: @escaping (Int) -> Int,
          _ f2: @escaping (Int) -> Int) -> (Int) -> Int{ { f2(f1($0)) } }
 
 /*
+ 高阶函数
+ 高阶函数是至少满足下列一个条件的函数：
+ 1、接受一个活多个函数作为输入（map、filter、reduce等）
+ 2、返回一个函数
+ */
+func addH(_ v: Int) -> (Int) -> Int {
+    { $0 + v }
+}
+
+/*
  柯里化
  什么是柯里化？
  将一个接受多参数的函数变换为一系列只接受单个参数的函数
@@ -91,16 +205,22 @@ prefix func ~<A, B, C, D>(_ fn: @escaping(A, B, C) -> D)
     {c in { b in {a in fn(a, b, c)}}}
 }
 
+/*
+ 函子
+ 像Array、Optional这样支持map运算的类型，称为函子（Functor）
+ */
 func testFunctional() {
 
-    print( (~add3)(30)(20)(10) )
-
-    //testSorted()
+    //print( (~add3)(30)(20)(10) )
 
     //let fn = add(3) >>> multiple(5) >>> sub(1) >>> mod(10) >>> divide(2)
     //print(fn(num))
 
-    //testArray()
+    //testLazy25()
+
+    //testArray25()
+
+    //testSorted25()
 }
 
 

@@ -35,6 +35,7 @@
 		36B6C28F25E4D54E009DBFEE /* 15_错误处理.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6C28E25E4D54E009DBFEE /* 15_错误处理.swift */; };
 		36CAFF1F25F20FE000D455CA /* 25_函数式编程.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAFF1E25F20FE000D455CA /* 25_函数式编程.swift */; };
 		36CAFF2425F8ABC600D455CA /* 24_多线程开发.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAFF2325F8ABC600D455CA /* 24_多线程开发.swift */; };
+		36CAFF4125FF43F500D455CA /* 26_面向协议编程.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAFF4025FF43F500D455CA /* 26_面向协议编程.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,6 +83,7 @@
 		36B6C28E25E4D54E009DBFEE /* 15_错误处理.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "15_错误处理.swift"; sourceTree = "<group>"; };
 		36CAFF1E25F20FE000D455CA /* 25_函数式编程.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "25_函数式编程.swift"; sourceTree = "<group>"; };
 		36CAFF2325F8ABC600D455CA /* 24_多线程开发.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "24_多线程开发.swift"; sourceTree = "<group>"; };
+		36CAFF4025FF43F500D455CA /* 26_面向协议编程.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "26_面向协议编程.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				360D4DEB25ECE4810063DBF9 /* 21_内存管理.swift */,
 				360D4E2925EE23680063DBF9 /* 23_模式匹配.swift */,
 				36CAFF1E25F20FE000D455CA /* 25_函数式编程.swift */,
+				36CAFF4025FF43F500D455CA /* 26_面向协议编程.swift */,
 			);
 			path = TestSwift;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				36B6C28F25E4D54E009DBFEE /* 15_错误处理.swift in Sources */,
 				36B633B425C3F00A00A4982C /* 5_可选项.swift in Sources */,
 				36B6C28525E0E3B3009DBFEE /* 12_初始化.swift in Sources */,
+				36CAFF4125FF43F500D455CA /* 26_面向协议编程.swift in Sources */,
 				36B6C28025E0ADF5009DBFEE /* 11_继承.swift in Sources */,
 				360D4E3325EE42BA0063DBF9 /* FFPerson.m in Sources */,
 				360D4DEC25ECE4810063DBF9 /* 21_内存管理.swift in Sources */,
